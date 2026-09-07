@@ -1,0 +1,12 @@
+import React from 'react'
+import { Navigate } from 'react-router-dom'
+
+export default function AuthRout({children}) {
+ if(localStorage.getItem("token")){
+    // go to componant
+return <Navigate to={'/home'} /> 
+ }
+ else{
+    return children
+ }
+}
